@@ -1,6 +1,6 @@
-![EpsteIn](assets/logo.png)
+![EpsteOut](assets/logo.png)
 
-Search the publicly released Epstein court documents for mentions of your LinkedIn connections.
+Search the publicly released Epstein court documents for mentions of your LinkedIn connections. This project is not authorized, endorsed, or otherwise affiliated with LinkedIn Corporation.
 
 ## Requirements
 
@@ -10,8 +10,8 @@ Search the publicly released Epstein court documents for mentions of your Linked
 ## Setup
 
 ```bash
-git clone git@github.com:cfinke/EpsteIn.git
-cd EpsteIn/
+git clone git@github.com:cfinke/EpsteOut.git
+cd EpsteOut/
 python3 -m venv project_venv
 source project_venv/bin/activate
 pip install -r requirements.txt
@@ -33,33 +33,33 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-python EpsteIn.py --connections /path/to/Connections.csv
+python EpsteOut.py --connections /path/to/Connections.csv
 ```
 
-The API that EpsteIn connects to has recently required an API key to access it. Keys are available for free at https://epstein.dugganusa.com/register.html
+The API that EpsteOut connects to has recently required an API key to access it. Keys are available for free at https://epstein.dugganusa.com/register.html
 
 ### Options
 
 | Flag | Description |
 |------|-------------|
 | `--connections`, `-c` | Path to LinkedIn Connections.csv export (required) |
-| `--output`, `-o` | Output HTML file path (default: `EpsteIn.html`) |
+| `--output`, `-o` | Output HTML file path (default: `EpsteOut.html`) |
 
 ### Examples
 
 Basic usage:
 ```bash
-python EpsteIn.py --connections ~/Downloads/Connections.csv
+python EpsteOut.py --connections ~/Downloads/Connections.csv
 ```
 
 Custom output file:
 ```bash
-python EpsteIn.py --connections ~/Downloads/Connections.csv --output my_report.html
+python EpsteOut.py --connections ~/Downloads/Connections.csv --output my_report.html
 ```
 
 ## Reading the Output
 
-The script generates an HTML report (`EpsteIn.html` by default) that you can open in any web browser.
+The script generates an HTML report (`EpsteOut.html` by default) that you can open in any web browser.
 
 ![A screenshot of the HTML report.](assets/screenshot.png)
 

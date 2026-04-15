@@ -3,7 +3,7 @@
 Search Epstein files for mentions of LinkedIn connections.
 
 Usage:
-    python EpsteIn.py --connections <linkedin_csv> [--output <report.html>]
+    python EpsteOut.py --connections <linkedin_csv> [--output <report.html>]
 
 Prerequisites:
     pip install requests
@@ -170,16 +170,16 @@ def generate_html_report(results, output_path):
     if os.path.exists(logo_path):
         with open(logo_path, 'rb') as f:
             logo_base64 = base64.b64encode(f.read()).decode('utf-8')
-        logo_html = f'<img src="data:image/png;base64,{logo_base64}" alt="EpsteIn" class="logo">'
+        logo_html = f'<img src="data:image/png;base64,{logo_base64}" alt="EpsteOut" class="logo">'
     else:
-        logo_html = '<h1 class="logo" style="text-align: center;">EpsteIn</h1>'
+        logo_html = '<h1 class="logo" style="text-align: center;">EpsteOut</h1>'
 
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EpsteIn: Which LinkedIn Connections Appear in the Epstein Files?</title>
+    <title>EpsteOut: Which LinkedIn Connections Appear in the Epstein Files?</title>
     <style>
         * {{
             box-sizing: border-box;
@@ -364,8 +364,8 @@ def main():
     )
     parser.add_argument(
         '--output', '-o',
-        default='EpsteIn.html',
-        help='Output HTML file for the report (default: EpsteIn.html)'
+        default='EpsteOut.html',
+        help='Output HTML file for the report (default: EpsteOut.html)'
     )
     args = parser.parse_args()
 
@@ -386,7 +386,7 @@ To export your LinkedIn connections:
   9. Download and extract the ZIP file
   10. Use the Connections.csv file with this script:
 
-     python EpsteIn.py --connections /path/to/Connections.csv
+     python EpsteOut.py --connections /path/to/Connections.csv
 """)
         sys.exit(1)
 
